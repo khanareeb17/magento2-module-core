@@ -17,6 +17,16 @@
             <label>General</label>
             <tab>akstackpro</tab>
             <resource>AkStackPro_Core::config</resource>
+            <group id="akstackpro_portal" translate="label" sortOrder="5"
+                   showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Ak Stack Pro</label>
+                <attribute type="expanded">1</attribute>
+                <field id="portal_content" translate="label" type="label" sortOrder="10"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label><!-- portal --></label>
+                    <frontend_model>AkStackPro\Core\Block\Adminhtml\System\Config\Form\Field\WebsitePortal</frontend_model>
+                </field>
+            </group>
             <group id="general" translate="label" sortOrder="10"
                    showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>About</label>

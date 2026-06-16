@@ -1,0 +1,131 @@
+<?php
+/**
+ * @author    AkStackPro
+ * @copyright Copyright (c) 2026 AkStackPro (http://akstackpro.com/)
+ * @package   AkStackPro_Core
+ *
+ * @var \AkStackPro\Core\Block\Adminhtml\System\Config\Form\Field\WebsitePortal $block
+ */
+$websiteUrl = $block->escapeUrl($block->getWebsiteUrl());
+$timeoutMs = (int) $block->getIframeTimeoutMs();
+?>
+<link rel="stylesheet" type="text/css"
+      href="<?= $block->escapeUrl($block->getViewFileUrl('AkStackPro_Core::css/website-preview.css')) ?>"
+      media="all"/>
+<div class="akstackpro-portal"
+     data-mage-init='{"AkStackPro_Core/js/website-preview": {"timeout": <?= /* @noEscape */ $timeoutMs ?>}}'>
+    <div class="akstackpro-portal__hero">
+        <div class="akstackpro-portal__hero-grid">
+            <div class="akstackpro-portal__hero-content">
+                <span class="akstackpro-portal__badge"><?= $block->escapeHtml(__('Official Ak Stack Pro')) ?></span>
+                <h3 class="akstackpro-portal__title"><?= $block->escapeHtml(__('Magento 2 Extensions Built for Growth')) ?></h3>
+                <p class="akstackpro-portal__text">
+                    <?= $block->escapeHtml(
+                        __('Inventory sync, shipping labels, and operational tools — all managed from one Ak Stack Pro workspace in your admin panel.')
+                    ) ?>
+                </p>
+                <div class="akstackpro-portal__actions">
+                    <a class="akstackpro-portal__btn akstackpro-portal__btn--primary"
+                       href="<?= $websiteUrl ?>"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <?= $block->escapeHtml(__('Visit akstackpro.com')) ?>
+                    </a>
+                    <a class="akstackpro-portal__btn akstackpro-portal__btn--ghost"
+                       href="<?= $websiteUrl ?>"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        <?= $block->escapeHtml(__('Contact Support')) ?>
+                    </a>
+                </div>
+            </div>
+            <div class="akstackpro-portal__hero-panel" aria-hidden="true">
+                <div class="akstackpro-portal__stat">
+                    <span class="akstackpro-portal__stat-value">24/7</span>
+                    <span class="akstackpro-portal__stat-label"><?= $block->escapeHtml(__('Support assistance')) ?></span>
+                </div>
+                <div class="akstackpro-portal__stat">
+                    <span class="akstackpro-portal__stat-value">M2</span>
+                    <span class="akstackpro-portal__stat-label"><?= $block->escapeHtml(__('Magento 2 ready')) ?></span>
+                </div>
+                <div class="akstackpro-portal__stat">
+                    <span class="akstackpro-portal__stat-value">PRO</span>
+                    <span class="akstackpro-portal__stat-label"><?= $block->escapeHtml(__('Enterprise workflows')) ?></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="akstackpro-portal__cards">
+        <div class="akstackpro-portal__card">
+            <span class="akstackpro-portal__card-icon">📦</span>
+            <h4><?= $block->escapeHtml(__('Extensions')) ?></h4>
+            <p><?= $block->escapeHtml(__('Install Ak Stack Pro modules and configure each one from its own section under this tab.')) ?></p>
+        </div>
+        <div class="akstackpro-portal__card">
+            <span class="akstackpro-portal__card-icon">📚</span>
+            <h4><?= $block->escapeHtml(__('Documentation')) ?></h4>
+            <p><?= $block->escapeHtml(__('Browse guides, release notes, and setup instructions on our website.')) ?></p>
+        </div>
+        <div class="akstackpro-portal__card">
+            <span class="akstackpro-portal__card-icon">💬</span>
+            <h4><?= $block->escapeHtml(__('Need help?')) ?></h4>
+            <p><?= $block->escapeHtml(__('Our team can help with installation, configuration, and troubleshooting.')) ?></p>
+        </div>
+    </div>
+
+    <div class="akstackpro-portal__preview">
+        <div class="akstackpro-portal__preview-header">
+            <div>
+                <span class="akstackpro-portal__preview-title"><?= $block->escapeHtml(__('Website Preview')) ?></span>
+                <span class="akstackpro-portal__preview-note">
+                    <?= $block->escapeHtml(__('Loads separately so your admin stays fast')) ?>
+                </span>
+            </div>
+            <a class="akstackpro-portal__preview-link"
+               href="<?= $websiteUrl ?>"
+               target="_blank"
+               rel="noopener noreferrer">
+                <?= $block->escapeHtml(__('Open in new tab')) ?>
+            </a>
+        </div>
+
+        <div class="akstackpro-portal__browser-chrome" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <div class="akstackpro-portal__browser-url">akstackpro.com</div>
+        </div>
+
+        <div class="akstackpro-portal__preview-body">
+            <div class="akstackpro-portal__loader">
+                <span class="akstackpro-portal__spinner"></span>
+                <span><?= $block->escapeHtml(__('Loading homepage preview…')) ?></span>
+            </div>
+
+            <iframe class="akstackpro-portal__iframe"
+                    title="<?= $block->escapeHtmlAttr(__('Ak Stack Pro website preview')) ?>"
+                    data-src="<?= $websiteUrl ?>"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    tabindex="-1"
+                    hidden></iframe>
+
+            <div class="akstackpro-portal__fallback" hidden>
+                <div class="akstackpro-portal__fallback-icon" aria-hidden="true">↗</div>
+                <p class="akstackpro-portal__fallback-title">
+                    <?= $block->escapeHtml(__('Preview unavailable')) ?>
+                </p>
+                <p class="akstackpro-portal__fallback-text">
+                    <?= $block->escapeHtml(
+                        __('The website could not be embedded here, but you can still visit akstackpro.com directly.')
+                    ) ?>
+                </p>
+                <a class="akstackpro-portal__btn akstackpro-portal__btn--primary akstackpro-portal__btn--dark"
+                   href="<?= $websiteUrl ?>"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <?= $block->escapeHtml(__('Open akstackpro.com')) ?>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

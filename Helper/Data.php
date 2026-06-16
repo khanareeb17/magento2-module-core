@@ -15,6 +15,7 @@ class Data extends AbstractHelper
     public const MENU_ID = 'AkStackPro_Core::menu';
     public const ACL_CONFIG = 'AkStackPro_Core::config';
     public const ACL_MENU = 'AkStackPro_Core::menu';
+    public const XML_PATH_WEBSITE_URL = 'akstackpro/portal/website_url';
 
     /**
      * Build a module menu group ID for adminhtml/menu.xml headings.
