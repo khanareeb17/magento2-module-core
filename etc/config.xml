@@ -12,7 +12,7 @@
         <akstackpro>
             <portal>
                 <website_url>https://akstackpro.com/</website_url>
-                <iframe_timeout>12</iframe_timeout>
+                <iframe_timeout>20</iframe_timeout>
             </portal>
             <general>
                 <version>1.0.0</version>

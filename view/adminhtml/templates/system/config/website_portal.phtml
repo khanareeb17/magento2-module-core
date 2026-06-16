@@ -14,21 +14,53 @@ $timeoutMs = (int) $block->getIframeTimeoutMs();
       media="all"/>
 <div class="akstackpro-portal"
      data-mage-init='{"AkStackPro_Core/js/website-preview": {"timeout": <?= /* @noEscape */ $timeoutMs ?>}}'>
+
     <div class="akstackpro-portal__hero">
-        <div class="akstackpro-portal__hero-grid">
-            <div class="akstackpro-portal__hero-content">
-                <span class="akstackpro-portal__badge"><?= $block->escapeHtml(__('Official Ak Stack Pro')) ?></span>
-                <h3 class="akstackpro-portal__title"><?= $block->escapeHtml(__('Magento 2 Extensions Built for Growth')) ?></h3>
+        <div class="akstackpro-portal__hero-bg" aria-hidden="true">
+            <span class="akstackpro-portal__orb akstackpro-portal__orb--1"></span>
+            <span class="akstackpro-portal__orb akstackpro-portal__orb--2"></span>
+            <span class="akstackpro-portal__orb akstackpro-portal__orb--3"></span>
+            <span class="akstackpro-portal__grid-lines"></span>
+        </div>
+
+        <div class="akstackpro-portal__hero-layout">
+            <div class="akstackpro-portal__hero-main">
+                <div class="akstackpro-portal__brand">
+                    <div class="akstackpro-portal__logo" aria-hidden="true">
+                        <span>ASP</span>
+                    </div>
+                    <div class="akstackpro-portal__brand-copy">
+                        <span class="akstackpro-portal__badge">
+                            <span class="akstackpro-portal__badge-dot"></span>
+                            <?= $block->escapeHtml(__('Official Ak Stack Pro')) ?>
+                        </span>
+                        <h3 class="akstackpro-portal__title">
+                            <?= $block->escapeHtml(__('Powerful Magento 2 Extensions')) ?>
+                        </h3>
+                    </div>
+                </div>
+
                 <p class="akstackpro-portal__text">
                     <?= $block->escapeHtml(
-                        __('Inventory sync, shipping labels, and operational tools — all managed from one Ak Stack Pro workspace in your admin panel.')
+                        __('Inventory, shipping, and store operations — unified under one professional extension suite built for modern Magento merchants.')
                     ) ?>
                 </p>
+
+                <div class="akstackpro-portal__chips">
+                    <span class="akstackpro-portal__chip"><?= $block->escapeHtml(__('Inventory Sync')) ?></span>
+                    <span class="akstackpro-portal__chip"><?= $block->escapeHtml(__('Shipping Labels')) ?></span>
+                    <span class="akstackpro-portal__chip"><?= $block->escapeHtml(__('Admin Integrations')) ?></span>
+                    <span class="akstackpro-portal__chip"><?= $block->escapeHtml(__('Enterprise Ready')) ?></span>
+                </div>
+
                 <div class="akstackpro-portal__actions">
                     <a class="akstackpro-portal__btn akstackpro-portal__btn--primary"
                        href="<?= $websiteUrl ?>"
                        target="_blank"
                        rel="noopener noreferrer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M14 3h7v7M10 14L21 3M21 14v7h-7M3 10V3h7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
                         <?= $block->escapeHtml(__('Visit akstackpro.com')) ?>
                     </a>
                     <a class="akstackpro-portal__btn akstackpro-portal__btn--ghost"
@@ -39,39 +71,87 @@ $timeoutMs = (int) $block->getIframeTimeoutMs();
                     </a>
                 </div>
             </div>
-            <div class="akstackpro-portal__hero-panel" aria-hidden="true">
-                <div class="akstackpro-portal__stat">
-                    <span class="akstackpro-portal__stat-value">24/7</span>
-                    <span class="akstackpro-portal__stat-label"><?= $block->escapeHtml(__('Support assistance')) ?></span>
+
+            <div class="akstackpro-portal__hero-aside">
+                <div class="akstackpro-portal__glass-card">
+                    <div class="akstackpro-portal__glass-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7l3-7z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <strong><?= $block->escapeHtml(__('Premium Quality')) ?></strong>
+                        <span><?= $block->escapeHtml(__('Production-grade Magento modules')) ?></span>
+                    </div>
                 </div>
-                <div class="akstackpro-portal__stat">
-                    <span class="akstackpro-portal__stat-value">M2</span>
-                    <span class="akstackpro-portal__stat-label"><?= $block->escapeHtml(__('Magento 2 ready')) ?></span>
+                <div class="akstackpro-portal__glass-card">
+                    <div class="akstackpro-portal__glass-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <strong><?= $block->escapeHtml(__('24/7 Support')) ?></strong>
+                        <span><?= $block->escapeHtml(__('Expert assistance when you need it')) ?></span>
+                    </div>
                 </div>
-                <div class="akstackpro-portal__stat">
-                    <span class="akstackpro-portal__stat-value">PRO</span>
-                    <span class="akstackpro-portal__stat-label"><?= $block->escapeHtml(__('Enterprise workflows')) ?></span>
+                <div class="akstackpro-portal__glass-card">
+                    <div class="akstackpro-portal__glass-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.6"/>
+                            <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <strong><?= $block->escapeHtml(__('Magento 2.4+')) ?></strong>
+                        <span><?= $block->escapeHtml(__('Compatible with latest releases')) ?></span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="akstackpro-portal__cards">
-        <div class="akstackpro-portal__card">
-            <span class="akstackpro-portal__card-icon">📦</span>
+    <div class="akstackpro-portal__features">
+        <a class="akstackpro-portal__feature" href="<?= $websiteUrl ?>" target="_blank" rel="noopener noreferrer">
+            <div class="akstackpro-portal__feature-top">
+                <span class="akstackpro-portal__feature-icon akstackpro-portal__feature-icon--blue">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M3.3 7.3L12 12l8.7-4.7M12 22V12" stroke="currentColor" stroke-width="1.8"/>
+                    </svg>
+                </span>
+                <span class="akstackpro-portal__feature-arrow" aria-hidden="true">→</span>
+            </div>
             <h4><?= $block->escapeHtml(__('Extensions')) ?></h4>
-            <p><?= $block->escapeHtml(__('Install Ak Stack Pro modules and configure each one from its own section under this tab.')) ?></p>
-        </div>
-        <div class="akstackpro-portal__card">
-            <span class="akstackpro-portal__card-icon">📚</span>
+            <p><?= $block->escapeHtml(__('Install modules and configure each one from its own section under this Ak Stack Pro tab.')) ?></p>
+        </a>
+
+        <a class="akstackpro-portal__feature" href="<?= $websiteUrl ?>" target="_blank" rel="noopener noreferrer">
+            <div class="akstackpro-portal__feature-top">
+                <span class="akstackpro-portal__feature-icon akstackpro-portal__feature-icon--violet">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.8"/>
+                    </svg>
+                </span>
+                <span class="akstackpro-portal__feature-arrow" aria-hidden="true">→</span>
+            </div>
             <h4><?= $block->escapeHtml(__('Documentation')) ?></h4>
-            <p><?= $block->escapeHtml(__('Browse guides, release notes, and setup instructions on our website.')) ?></p>
-        </div>
-        <div class="akstackpro-portal__card">
-            <span class="akstackpro-portal__card-icon">💬</span>
-            <h4><?= $block->escapeHtml(__('Need help?')) ?></h4>
-            <p><?= $block->escapeHtml(__('Our team can help with installation, configuration, and troubleshooting.')) ?></p>
-        </div>
+            <p><?= $block->escapeHtml(__('Browse setup guides, release notes, and best practices on our website.')) ?></p>
+        </a>
+
+        <a class="akstackpro-portal__feature" href="<?= $websiteUrl ?>" target="_blank" rel="noopener noreferrer">
+            <div class="akstackpro-portal__feature-top">
+                <span class="akstackpro-portal__feature-icon akstackpro-portal__feature-icon--cyan">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M21 15a4 4 0 01-4 4H8l-5 3 1.5-4.5A4 4 0 014 15V7a4 4 0 014-4h9a4 4 0 014 4v8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+                <span class="akstackpro-portal__feature-arrow" aria-hidden="true">→</span>
+            </div>
+            <h4><?= $block->escapeHtml(__('Need Help?')) ?></h4>
+            <p><?= $block->escapeHtml(__('Our team helps with installation, configuration, and troubleshooting.')) ?></p>
+        </a>
     </div>
 
     <div class="akstackpro-portal__preview">
@@ -101,13 +181,11 @@ $timeoutMs = (int) $block->getIframeTimeoutMs();
                 <span><?= $block->escapeHtml(__('Loading homepage preview…')) ?></span>
             </div>
 
-            <iframe class="akstackpro-portal__iframe"
+            <iframe class="akstackpro-portal__iframe akstackpro-portal__iframe--loading"
                     title="<?= $block->escapeHtmlAttr(__('Ak Stack Pro website preview')) ?>"
                     data-src="<?= $websiteUrl ?>"
-                    loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
-                    tabindex="-1"
-                    hidden></iframe>
+                    tabindex="-1"></iframe>
 
             <div class="akstackpro-portal__fallback" hidden>
                 <div class="akstackpro-portal__fallback-icon" aria-hidden="true">↗</div>
