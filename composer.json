@@ -1,0 +1,29 @@
+{
+    "name": "akstackpro/module-core",
+    "description": "AkStackPro base module for shared admin menu and configuration structure",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "proprietary"
+    ],
+    "authors": [
+        {
+            "name": "AkStackPro",
+            "homepage": "https://akstackpro.com/"
+        }
+    ],
+    "require": {
+        "php": "^8.1|^8.2|^8.3",
+        "magento/framework": "*",
+        "magento/module-backend": "*",
+        "magento/module-config": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "AkStackPro\\Core\\": ""
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author    AkStackPro
+ * @copyright Copyright (c) 2026 AkStackPro (http://akstackpro.com/)
+ * @package   AkStackPro_Core
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="AkStackPro_Core::menu"
+             title="Ak Stack Pro"
+             module="AkStackPro_Core"
+             sortOrder="65"
+             resource="AkStackPro_Core::menu"/>
+        <add id="AkStackPro_Core::configuration"
+             title="Configuration"
+             module="AkStackPro_Core"
+             sortOrder="10"
+             parent="AkStackPro_Core::menu"
+             action="adminhtml/system_config/edit/section/akstackpro"
+             resource="AkStackPro_Core::config"/>
+    </menu>
+</config>

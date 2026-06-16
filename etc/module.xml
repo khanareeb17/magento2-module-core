@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author    AkStackPro
+ * @copyright Copyright (c) 2026 AkStackPro (http://akstackpro.com/)
+ * @package   AkStackPro_Core
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="AkStackPro_Core">
+        <sequence>
+            <module name="Magento_Backend"/>
+            <module name="Magento_Config"/>
+        </sequence>
+    </module>
+</config>

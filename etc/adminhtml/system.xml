@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author    AkStackPro
+ * @copyright Copyright (c) 2026 AkStackPro (http://akstackpro.com/)
+ * @package   AkStackPro_Core
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="akstackpro" translate="label" sortOrder="200" class="akstackpro-tab">
+            <label>Ak Stack Pro</label>
+        </tab>
+        <section id="akstackpro" translate="label" type="text" sortOrder="0"
+                 showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>General</label>
+            <tab>akstackpro</tab>
+            <resource>AkStackPro_Core::config</resource>
+            <group id="general" translate="label" sortOrder="10"
+                   showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>About</label>
+                <field id="version" translate="label" type="label" sortOrder="10"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Core Module Version</label>
+                    <frontend_model>AkStackPro\Core\Block\Adminhtml\System\Config\Form\Field\Version</frontend_model>
+                </field>
+                <field id="documentation" translate="label" type="label" sortOrder="20"
+                       showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Documentation</label>
+                    <comment><![CDATA[Install Ak Stack Pro extensions and configure each module from its own section under this tab.]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
